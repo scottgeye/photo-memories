@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import { MagnifierIcon, PlaneIcon, GiftIcon } from "../components/Icons";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -9,37 +9,34 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <MedalIcon />,
-    title: "Accesibility",
+    icon: <GiftIcon />,
+    title: "1. Physical Transfer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "You can choose to send us your photos or use our concierge service to pick them up directly from your home."
   },
   {
-    icon: <MapIcon />,
-    title: "Community",
+    icon: <MagnifierIcon />,
+    title: "2. Digital Scan",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "We use high resolution scanners to digitize your photos in a clean environment."
   },
   {
     icon: <PlaneIcon />,
-    title: "Scalability",
+    title: "3. AI Processing",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "One the photos are digitized, the machine go to work to restore and enhance your photos."
   },
   {
     icon: <GiftIcon />,
-    title: "Gamification",
+    title: "4. Digital Delivery",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-  },
+      "Once the photos are processed, we deliver them to you in a digital format of your choice."
+  }
 ];
 
 export const HowItWorks = () => {
   return (
-    <section
-      id="howItWorks"
-      className="container text-center py-24 sm:py-32"
-    >
+    <section id="howItWorks" className="container text-center py-12">
       <h2 className="text-3xl md:text-4xl font-bold ">
         How It{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -48,16 +45,12 @@ export const HowItWorks = () => {
         Step-by-Step Guide
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+        The entire process is simple and getting started is easy.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map(({ icon, title, description }: FeatureProps) => (
-          <Card
-            key={title}
-            className="bg-muted/50"
-          >
+          <Card key={title} className="bg-muted/50">
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">
                 {icon}

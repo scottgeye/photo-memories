@@ -1,10 +1,11 @@
 import { Button } from "./ui/button";
 // import { HeroCards } from "./HeroCards";
+import image from "../assets/compare.png";
 
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
-      <div className="text-center lg:text-start space-y-6">
+    <section className="container flex flex-col lg:flex-row lg:grid-cols-2 place-items-center py-50 md:py-10 lg:py-0 gap-10">
+      <div className="text-center lg:text-start space-y-6 lg:order-first order-last">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
@@ -31,11 +32,18 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Hero cards sections */}
-      <div className="z-10">{/* <HeroCards /> */}</div>
+      <div className="lg:order-last order-first">
+        <div className="relative z-10">
+          <img
+            src={image}
+            alt="About feature"
+            className="w-[500px] lg:w-[600px] mx-auto"
+          />
+        </div>
 
-      {/* Shadow effect */}
-      <div className="shadow"></div>
+        {/* Shadow effect */}
+        <div className="shadow"></div>
+      </div>
     </section>
   );
 };

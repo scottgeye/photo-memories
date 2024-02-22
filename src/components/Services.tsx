@@ -1,6 +1,6 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import cubeLeg from "../assets/cube-leg.png";
+import image from "../assets/smiling-girl.jpg";
 
 interface ServiceProps {
   title: string;
@@ -10,40 +10,40 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Let's talk",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <ChartIcon />,
+      "We reach out to you to learn more about your photos and what your expectations are.",
+    icon: <ChartIcon />
   },
   {
-    title: "Project Management",
+    title: "Schedule Pickup",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <WalletIcon />,
+      "We schedule a pickup time that works for you and pick up your photos from your home.",
+    icon: <WalletIcon />
   },
   {
-    title: "Task Automation",
+    title: "Handle with Care",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
-  },
+      "We handle your photos with care and make sure they are safe during the entire process.",
+    icon: <MagnifierIcon />
+  }
 ];
 
 export const Services = () => {
   return (
-    <section className="container py-24 sm:py-32">
+    <section className="container py-12">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+              Concierge{" "}
             </span>
             Services
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+            Your photos are important to us and want to make sure we return them
+            in the same condition we received them.
           </p>
 
           <div className="flex flex-col gap-8">
@@ -66,8 +66,8 @@ export const Services = () => {
         </div>
 
         <img
-          src={cubeLeg}
-          className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
+          src={image}
+          className="w-[250px] md:w-[350px] lg:w-[450px] object-contain"
           alt="About services"
         />
       </div>
