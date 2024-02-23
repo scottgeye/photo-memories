@@ -1,5 +1,5 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
+import { PhoneCall, CalendarCheck, HeartHandshake } from "./Icons";
 import image from "../assets/smiling-girl.jpg";
 
 interface ServiceProps {
@@ -13,19 +13,19 @@ const serviceList: ServiceProps[] = [
     title: "Let's talk",
     description:
       "We reach out to you to learn more about your photos and what your expectations are.",
-    icon: <ChartIcon />
+    icon: <PhoneCall />
   },
   {
     title: "Schedule Pickup",
     description:
       "We schedule a pickup time that works for you and pick up your photos from your home.",
-    icon: <WalletIcon />
+    icon: <CalendarCheck />
   },
   {
     title: "Handle with Care",
     description:
       "We handle your photos with care and make sure they are safe during the entire process.",
-    icon: <MagnifierIcon />
+    icon: <HeartHandshake />
   }
 ];
 
@@ -38,7 +38,7 @@ export const Services = () => {
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               Concierge{" "}
             </span>
-            Services
+            Service
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">

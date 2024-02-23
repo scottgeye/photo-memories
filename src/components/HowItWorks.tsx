@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MagnifierIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import { Package, ScanText, BrainCog, Globe } from "../components/Icons";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -9,40 +9,39 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <GiftIcon />,
+    icon: <Package />,
     title: "1. Physical Transfer",
     description:
       "You can choose to send us your photos or use our concierge service to pick them up directly from your home."
   },
   {
-    icon: <MagnifierIcon />,
+    icon: <ScanText />,
     title: "2. Digital Scan",
     description:
       "We use high resolution scanners to digitize your photos in a clean environment."
   },
   {
-    icon: <PlaneIcon />,
+    icon: <BrainCog />,
     title: "3. AI Processing",
     description:
       "One the photos are digitized, the machine go to work to restore and enhance your photos."
   },
   {
-    icon: <GiftIcon />,
-    title: "4. Digital Delivery",
+    icon: <Globe />,
+    title: "4. Online Delivery",
     description:
-      "Once the photos are processed, we deliver them to you in a digital format of your choice."
+      "Once the photos are processed, we deliver them to you instantly online."
   }
 ];
 
 export const HowItWorks = () => {
   return (
-    <section id="howItWorks" className="container text-center py-12">
+    <section id="howItWorks" className="container text-center py-20">
       <h2 className="text-3xl md:text-4xl font-bold ">
         How It{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Works{" "}
         </span>
-        Step-by-Step Guide
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
         The entire process is simple and getting started is easy.

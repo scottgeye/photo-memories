@@ -39,7 +39,7 @@ const features: FeatureProps[] = [
 
 export const Features = () => {
   return (
-    <section id="features" className="container py-12 space-y-8">
+    <section id="features" className="container py-20 space-y-8">
       <h2 className="text-3xl lg:text-4xl font-bold text-center">
         Let{" "}
         <span className="inline bg-gradient-to-r from-[#61fb7d] via-[#1ff142] to-[#03d71c] text-transparent bg-clip-text">

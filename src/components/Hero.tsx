@@ -1,6 +1,8 @@
 import { Button } from "./ui/button";
 // import { HeroCards } from "./HeroCards";
 import image from "../assets/compare.png";
+import { ContactDialog } from "./ContactDialog";
+import { Dialog, DialogTrigger } from "./ui/dialog";
 
 export const Hero = () => {
   return (
@@ -28,7 +30,14 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Get Started</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="w-full md:w-1/3 px-8 py-7 text-lg">
+                Get Started
+              </Button>
+            </DialogTrigger>
+            <ContactDialog />
+          </Dialog>
         </div>
       </div>
 
@@ -37,7 +46,7 @@ export const Hero = () => {
           <img
             src={image}
             alt="About feature"
-            className="w-[500px] lg:w-[600px] mx-auto"
+            className="w-[500px] lg:w-[600px] mx-auto lg:mr-80"
           />
         </div>
 

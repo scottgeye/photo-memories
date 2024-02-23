@@ -15,7 +15,7 @@ import {
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import { Sparkles } from "./Icons";
 
 interface RouteProps {
   href: string;
@@ -28,8 +28,8 @@ const routeList: RouteProps[] = [
     label: "Features"
   },
   {
-    href: "#testimonials",
-    label: "Testimonials"
+    href: "#howItWorks",
+    label: "How It Works"
   },
   {
     href: "#pricing",
@@ -49,8 +49,7 @@ export const Navbar = () => {
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <a href="/" className="ml-2 font-bold text-xl flex">
-              <LogoIcon />
-              Photo Memories AI
+              <Sparkles className="mr-2" /> Photo Memories AI
             </a>
           </NavigationMenuItem>
 
