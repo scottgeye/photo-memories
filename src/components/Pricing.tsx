@@ -35,7 +35,7 @@ const pricingList: PricingProps[] = [
     popular: 0,
     price: 0.75,
     description: "Minium 100 photos.",
-    disclaimer: "Shipping not included",
+    disclaimer: "Pickup & Shipping not included",
     buttonText: "Get Started",
     benefitList: [
       "Digitize Photos",
@@ -56,6 +56,7 @@ const pricingList: PricingProps[] = [
       "Everything in Basic",
       "AI Colorize",
       "AI Face Enhance",
+      "AI Denoise",
       "Free Conciege Pickup*"
     ]
   },

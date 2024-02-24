@@ -52,6 +52,8 @@ export const Examples = () => {
     );
   };
 
+  const imageSizes = "max-h-[200px] sm:max-h-[400px]";
+
   return (
     <section id="features" className="container py-15 text-center">
       <h2 className="text-3xl lg:text-4xl font-bold text-center">
@@ -76,45 +78,41 @@ export const Examples = () => {
         <CarouselPrevious />
         <CarouselContent>
           {examples.map(({ id, beforeImage, afterImage }: ExamplesProps) => (
-            <CarouselItem
-              key={id}
-              className="basis-full md:basis-1/3 lg:basis-1/2"
-            >
-              <div className="p-2">
-                <Card>
-                  <CardContent className="w-full flex aspect-square items-center justify-center flex-wrap p-6">
-                    <img
-                      src={beforeImage}
-                      alt="Before photo"
-                      className={`max-h-40 md:max-h-60 lg:max-h-80 ${
-                        checkedArray[id] ? "hidden" : "block"
-                      }`}
-                    />
-                    <img
-                      src={afterImage}
-                      alt="After photo"
-                      className={`max-h-40 md:max-h-60 lg:max-h-80 ${
-                        checkedArray[id] ? "block" : "hidden"
-                      }`}
-                    />
+            <CarouselItem key={id} className="basis-full md:basis-1/2">
+              <Card>
+                <CardContent className="w-full flex aspect-square items-center justify-center flex-wrap py-0 px-4 bg-muted/50">
+                  <img
+                    src={beforeImage}
+                    alt="Before photo"
+                    className={`${imageSizes} ${
+                      checkedArray[id] ? "hidden" : "block"
+                    }`}
+                  />
+                  <img
+                    src={afterImage}
+                    alt="After photo"
+                    className={`${imageSizes} ${
+                      checkedArray[id] ? "block" : "hidden"
+                    }`}
+                  />
 
-                    <div className="w-full flex items-center justify-center space-x-2">
-                      <Label htmlFor="compare">
-                        <FileImage />
-                      </Label>
-                      <Switch
-                        id="compare"
-                        onCheckedChange={(checked: boolean) => {
-                          setCheckedAtIndex(id, checked);
-                        }}
-                      />
-                      <Label htmlFor="compare">
-                        <Sparkles />
-                      </Label>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                  <div className="w-full flex items-center justify-center space-x-2">
+                    <Label htmlFor="compare">
+                      <FileImage />
+                    </Label>
+                    <Switch
+                      id="compare"
+                      className="data-[state=unchecked]:bg-primary/40"
+                      onCheckedChange={(checked: boolean) => {
+                        setCheckedAtIndex(id, checked);
+                      }}
+                    />
+                    <Label htmlFor="compare">
+                      <Sparkles />
+                    </Label>
+                  </div>
+                </CardContent>
+              </Card>
             </CarouselItem>
           ))}
         </CarouselContent>

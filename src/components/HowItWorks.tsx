@@ -51,8 +51,8 @@ export const HowItWorks = () => {
         {features.map(({ icon, title, description }: FeatureProps) => (
           <Card key={title} className="bg-muted/50">
             <CardHeader>
-              <CardTitle className="grid gap-4 place-items-center">
-                {icon}
+              <CardTitle className="grid gap-4 place-items-center mt-4">
+                <span className="scale-150">{icon}</span>
                 {title}
               </CardTitle>
             </CardHeader>
