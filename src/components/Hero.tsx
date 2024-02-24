@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 // import { HeroCards } from "./HeroCards";
-import image from "../assets/compare.png";
+import image from "../assets/hero.png";
 import { ContactDialog } from "./ContactDialog";
 import { Dialog, DialogTrigger } from "./ui/dialog";
 

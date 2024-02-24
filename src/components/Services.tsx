@@ -5,6 +5,7 @@ import image from "../assets/smiling-girl.jpg";
 interface ServiceProps {
   title: string;
   description: string;
+  discalimer?: string;
   icon: JSX.Element;
 }
 
@@ -19,6 +20,7 @@ const serviceList: ServiceProps[] = [
     title: "Schedule Pickup",
     description:
       "We schedule a pickup time that works for you and pick up your photos from your home.",
+    discalimer: "Currently only available in Orange County, CA",
     icon: <CalendarCheck />
   },
   {
@@ -31,7 +33,7 @@ const serviceList: ServiceProps[] = [
 
 export const Services = () => {
   return (
-    <section className="container py-12">
+    <section className="container py-20">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -47,21 +49,29 @@ export const Services = () => {
           </p>
 
           <div className="flex flex-col gap-8">
-            {serviceList.map(({ icon, title, description }: ServiceProps) => (
-              <Card key={title}>
-                <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
-                    {icon}
-                  </div>
-                  <div>
-                    <CardTitle>{title}</CardTitle>
-                    <CardDescription className="text-md mt-2">
-                      {description}
-                    </CardDescription>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
+            {serviceList.map(
+              ({ icon, title, description, discalimer }: ServiceProps) => (
+                <Card key={title}>
+                  <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
+                    <div className="mt-1 bg-primary/20 p-2 rounded-3xl">
+                      {icon}
+                    </div>
+                    <div>
+                      <CardTitle>{title}</CardTitle>
+                      <CardDescription className="text-md mt-2">
+                        {description}
+                      </CardDescription>
+
+                      {discalimer && (
+                        <CardDescription className="text-xs mt-2">
+                          * {discalimer}
+                        </CardDescription>
+                      )}
+                    </div>
+                  </CardHeader>
+                </Card>
+              )
+            )}
           </div>
         </div>
 

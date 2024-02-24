@@ -9,6 +9,8 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { ContactDialog } from "./ContactDialog";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 
 enum PopularPlanType {
   NO = 0,
@@ -17,9 +19,11 @@ enum PopularPlanType {
 
 interface PricingProps {
   title: string;
+  name: string;
   popular: PopularPlanType;
   price: number;
   description: string;
+  disclaimer?: string;
   buttonText: string;
   benefitList: string[];
 }
@@ -27,9 +31,11 @@ interface PricingProps {
 const pricingList: PricingProps[] = [
   {
     title: "AI Basic",
+    name: "basic",
     popular: 0,
     price: 0.75,
-    description: "Minium 100 photos",
+    description: "Minium 100 photos.",
+    disclaimer: "Shipping not included",
     buttonText: "Get Started",
     benefitList: [
       "Digitize Photos",
@@ -40,19 +46,22 @@ const pricingList: PricingProps[] = [
   },
   {
     title: "AI Enhanced",
+    name: "enhanced",
     popular: 1,
     price: 1.0,
     description: "Minium 100 photos",
+    disclaimer: "Shipping not included",
     buttonText: "Get Started",
     benefitList: [
       "Everything in Basic",
       "AI Colorize",
       "AI Face Enhance",
-      "Free Conciege Pickup"
+      "Free Conciege Pickup*"
     ]
   },
   {
     title: "AI Motion",
+    name: "enhanced",
     popular: 0,
     price: 1.25,
     description: "Coming Soon",
@@ -99,14 +108,26 @@ export const Pricing = () => {
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /photo</span>
+                <span className="text-muted-foreground"> / photo</span>
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>
+              {pricing.disclaimer ? (
+                <CardDescription className="text-sm mt-2">
+                  {pricing.disclaimer}
+                </CardDescription>
+              ) : (
+                <div className="pt-[22px]" />
+              )}
             </CardHeader>
 
             <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className="w-full">{pricing.buttonText}</Button>
+                </DialogTrigger>
+                <ContactDialog defaultPackage={pricing.name} />
+              </Dialog>
             </CardContent>
 
             <hr className="w-4/5 m-auto mb-4" />

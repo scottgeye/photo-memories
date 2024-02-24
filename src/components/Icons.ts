@@ -7,7 +7,8 @@ import {
   ScanText,
   BrainCog,
   Globe,
-  Sparkles
+  Sparkles,
+  FileImage
 } from "lucide-react";
 
 export {
@@ -19,5 +20,6 @@ export {
   ScanText,
   BrainCog,
   Globe,
-  Sparkles
+  Sparkles,
+  FileImage
 };

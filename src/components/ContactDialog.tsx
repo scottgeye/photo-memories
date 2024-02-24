@@ -26,8 +26,13 @@ import {
   SelectValue
 } from "@/components/ui/select";
 import { CheckCircle } from "./Icons";
+import { sendEmail } from "@/lib/email";
 
-export function ContactDialog() {
+interface ContactDialogProps {
+  defaultPackage?: string;
+}
+
+export function ContactDialog({ defaultPackage }: ContactDialogProps) {
   const [isSubmitted, setSubmitted] = useState<boolean>(false);
 
   const formSchema = z.object({
@@ -44,14 +49,14 @@ export function ContactDialog() {
       name: "",
       email: "",
       phone: "",
-      package: "basic",
+      package: defaultPackage,
       photoCount: "250_500"
     }
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setSubmitted(true);
-    console.log(values);
+    sendEmail(JSON.stringify(values, null, 2));
   };
 
   return (
@@ -133,7 +138,7 @@ export function ContactDialog() {
                           <SelectItem value="basic">
                             Digitize & Restore
                           </SelectItem>
-                          <SelectItem value="enhance">
+                          <SelectItem value="enhanced">
                             Digitize, Restore & Enhance
                           </SelectItem>
                         </SelectContent>
@@ -160,8 +165,8 @@ export function ContactDialog() {
                         <SelectContent>
                           <SelectItem value="100_250">100-250</SelectItem>
                           <SelectItem value="250_500">250-500</SelectItem>
-                          <SelectItem value="500_1000">500-1000</SelectItem>
-                          <SelectItem value="1000plus">1000+</SelectItem>
+                          <SelectItem value="500_1000">500-1,000</SelectItem>
+                          <SelectItem value="1000+">1,000+</SelectItem>
                         </SelectContent>
                       </Select>
                     </FormItem>

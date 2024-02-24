@@ -12,7 +12,7 @@ const features: FeatureProps[] = [
     icon: <Package />,
     title: "1. Physical Transfer",
     description:
-      "You can choose to send us your photos or use our concierge service to pick them up directly from your home."
+      "You can choose to send us your photos or use our concierge service* to pick them up directly from your home."
   },
   {
     icon: <ScanText />,

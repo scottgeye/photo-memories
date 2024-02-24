@@ -1,8 +1,10 @@
 import { Button } from "./ui/button";
+import { ContactDialog } from "./ContactDialog";
+import { Dialog, DialogTrigger } from "./ui/dialog";
 
 export const Cta = () => {
   return (
-    <section id="cta" className="bg-muted/50 py-12">
+    <section id="cta" className="bg-muted/50 py-20">
       <div className="container lg:grid lg:grid-cols-2 place-items-center">
         <div className="lg:col-start-1">
           <h2 className="text-3xl md:text-4xl font-bold ">
@@ -19,7 +21,14 @@ export const Cta = () => {
         </div>
 
         <div className="space-y-4 lg:col-start-2">
-          <Button className="text-2xl w-full py-10 px-16">Get Started</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="text-2xl w-full py-10 px-16">
+                Get Started
+              </Button>
+            </DialogTrigger>
+            <ContactDialog />
+          </Dialog>
         </div>
       </div>
     </section>
