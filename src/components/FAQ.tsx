@@ -15,7 +15,7 @@ const FAQList: FAQProps[] = [
   {
     question: "Does it work?",
     answer:
-      "Yes! The examples on this site are all real photos processed through our AI. If there are any processed photos you're unhappy with, we have a no questions asked refund policy.",
+      "Yes! The examples on this site are all real photos processed through our AI. But even AI isn't perfect and some pictures will look better than others. If there are any processed photos you're unhappy with, we have a no questions asked refund policy for all AI restoration and enhancement.",
     value: "item-1"
   },
   {
@@ -42,18 +42,23 @@ const FAQList: FAQProps[] = [
       "Once we receive your photos, and authorize payment, the process takes about 3-4 days depending on the number of photos and the level of service you choose. We'll keep you updated on the progress.",
     value: "item-5"
   },
-
   {
     question: "When do I get charged?",
     answer:
       "You'll be charged once we receive your photos and we've had a chance to review them. We'll send you a final invoice with the cost of service and return shipping.",
     value: "item-6"
+  },
+  {
+    question: "How do I see the results?",
+    answer:
+      "We'll provide you with a link to both the raw and AI processed result in an online photo album.",
+    value: "item-7"
   }
 ];
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="container py-24 sm:py-32">
+    <section id="faq" className="container py-20 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
         Frequently Asked{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">

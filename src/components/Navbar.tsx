@@ -14,7 +14,7 @@ import {
 
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
+// import { ModeToggle } from "./mode-toggle";
 import { Sparkles } from "./Icons";
 
 interface RouteProps {
@@ -55,7 +55,7 @@ export const Navbar = () => {
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
+            {/* <ModeToggle /> */}
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
@@ -104,9 +104,9 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
+          {/* <div className="hidden md:flex gap-2">
             <ModeToggle />
-          </div>
+          </div> */}
         </NavigationMenuList>
       </NavigationMenu>
     </header>

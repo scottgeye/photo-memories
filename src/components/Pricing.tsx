@@ -21,7 +21,7 @@ interface PricingProps {
   title: string;
   name: string;
   popular: PopularPlanType;
-  price: number;
+  price: string;
   description: string;
   disclaimer?: string;
   buttonText: string;
@@ -30,47 +30,44 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "AI Basic",
+    title: "Basic",
     name: "basic",
     popular: 0,
-    price: 0.75,
+    price: "0.50",
     description: "Minium 100 photos.",
     disclaimer: "Pickup & Shipping not included",
     buttonText: "Get Started",
+    benefitList: ["Digitize Photos", "Digital Photo Library", "Online Support"]
+  },
+  {
+    title: "AI Restoration",
+    name: "enhanced",
+    popular: 1,
+    price: "0.75",
+    description: "Minium 100 photos",
+    disclaimer: "Pickup & Shipping not included",
+    buttonText: "Get Started",
     benefitList: [
-      "Digitize Photos",
-      "AI Restore",
-      "Digital Photo Album",
-      "Online Support"
+      "Everything in Basic",
+      "AI Quality Improvement",
+      "AI Face Enhance",
+      "AI Color Correction",
+      "AI Noise Reduction"
     ]
   },
   {
     title: "AI Enhanced",
     name: "enhanced",
-    popular: 1,
-    price: 1.0,
+    popular: 0,
+    price: "1",
     description: "Minium 100 photos",
     disclaimer: "Shipping not included",
     buttonText: "Get Started",
     benefitList: [
-      "Everything in Basic",
+      "Everything in AI Restoration",
       "AI Colorize",
-      "AI Face Enhance",
-      "AI Denoise",
-      "Free Conciege Pickup*"
-    ]
-  },
-  {
-    title: "AI Motion",
-    name: "enhanced",
-    popular: 0,
-    price: 1.25,
-    description: "Coming Soon",
-    buttonText: "Contact Us",
-    benefitList: [
-      "Everything in Enhanced",
-      "AI Photo Animation",
-      "Bring your photos to life"
+      "AI Fix Scratches/Creases/Spots",
+      "Free Concierge Pickup*"
     ]
   }
 ];

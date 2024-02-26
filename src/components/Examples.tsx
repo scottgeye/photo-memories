@@ -52,7 +52,7 @@ export const Examples = () => {
     );
   };
 
-  const imageSizes = "max-h-[200px] sm:max-h-[400px]";
+  const imageSizes = "";
 
   return (
     <section id="features" className="container py-15 text-center">
@@ -73,14 +73,14 @@ export const Examples = () => {
           align: "start",
           loop: true
         }}
-        className="mx-8 md:mx-10 lg:mx-20"
+        className="mx-2 md:mx-10 lg:mx-20"
       >
-        <CarouselPrevious />
+        <CarouselPrevious variant="link" className="ml-4" />
         <CarouselContent>
           {examples.map(({ id, beforeImage, afterImage }: ExamplesProps) => (
             <CarouselItem key={id} className="basis-full md:basis-1/2">
               <Card>
-                <CardContent className="w-full flex aspect-square items-center justify-center flex-wrap py-0 px-4 bg-muted/50">
+                <CardContent className="w-full flex aspect-square items-center justify-center flex-wrap py-0 px-3 bg-muted/50">
                   <img
                     src={beforeImage}
                     alt="Before photo"
@@ -117,7 +117,7 @@ export const Examples = () => {
           ))}
         </CarouselContent>
 
-        <CarouselNext />
+        <CarouselNext variant="link" className="mr-4" />
       </Carousel>
     </section>
   );
