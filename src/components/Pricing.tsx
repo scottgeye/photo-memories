@@ -41,7 +41,7 @@ const pricingList: PricingProps[] = [
   },
   {
     title: "AI Restoration",
-    name: "enhanced",
+    name: "restored",
     popular: 1,
     price: "0.75",
     description: "Minium 100 photos",

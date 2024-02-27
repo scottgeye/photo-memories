@@ -135,7 +135,8 @@ export function ContactDialog({ defaultPackage }: ContactDialogProps) {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="basic">
+                          <SelectItem value="basic">Digitize</SelectItem>
+                          <SelectItem value="restored">
                             Digitize & Restore
                           </SelectItem>
                           <SelectItem value="enhanced">
