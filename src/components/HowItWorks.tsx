@@ -24,7 +24,7 @@ const features: FeatureProps[] = [
     icon: <BrainCog />,
     title: "3. AI Processing",
     description:
-      "One the photos are digitized, the machine go to work to restore and enhance your photos."
+      "Once the photos are digitized, the machine goes to work to restore and enhance your photos."
   },
   {
     icon: <Globe />,
