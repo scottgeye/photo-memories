@@ -44,8 +44,8 @@ export const Services = () => {
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Your photos are important to us and want to make sure we return them
-            in the same condition we received them.
+            Your photos are important to us and we want to make sure we return
+            them in the same condition we received them.
           </p>
 
           <div className="flex flex-col gap-8">
