@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/select";
 import { CheckCircle } from "./Icons";
 import { sendEmail } from "@/lib/email";
+import { track } from "@vercel/analytics";
 
 interface ContactDialogProps {
   defaultPackage?: string;
@@ -56,6 +57,7 @@ export function ContactDialog({ defaultPackage }: ContactDialogProps) {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setSubmitted(true);
+    track("Contact", values);
     sendEmail(JSON.stringify(values, null, 2));
   };
 

@@ -15,6 +15,7 @@ import { Examples } from "./components/Examples";
 // import { Team } from "./components/Team";
 // import { Testimonials } from "./components/Testimonials";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <FAQ />
       <Footer />
       <ScrollToTop />
+      <Analytics />
     </>
   );
 }
