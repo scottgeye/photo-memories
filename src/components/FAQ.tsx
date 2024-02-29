@@ -25,15 +25,15 @@ const FAQList: FAQProps[] = [
     value: "item-2"
   },
   {
-    question: "Can I trust you with my photos?",
-    answer:
-      "We take the security of you photos and your privacy very seriously. All photos are processed in a clean room and handled with sterile gloves and instruments",
-    value: "item-3"
-  },
-  {
     question: "Can I trust AI with my photos?",
     answer:
       "Absolutely, all the AI models that we use to process your photos run in-house on our own secure servers. Your photos are never used to train other AI models, they are never processed in the cloud, and they never leave our physical hard drives until they've finished processing and are uploaded to a private photo album for you to view.",
+    value: "item-3"
+  },
+  {
+    question: "What locations can do you pick up from?",
+    answer:
+      "Currently, we only pickup from locations in Orange County, CA. We'll except shipments from anywhere in the US.",
     value: "item-4"
   },
   {
