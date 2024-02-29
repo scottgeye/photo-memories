@@ -25,34 +25,40 @@ const FAQList: FAQProps[] = [
     value: "item-2"
   },
   {
-    question: "What locations can do you pick up from?",
+    question: "Can I trust you with my photos?",
     answer:
-      "Currently, we only pickup from locations in Orange County, CA. We'll except shipments from anywhere in the US.",
+      "We take the security of you photos and your privacy very seriously. All photos are processed in a clean room and handled with sterile gloves and instruments",
     value: "item-3"
+  },
+  {
+    question: "Can I trust AI with my photos?",
+    answer:
+      "Absolutely, all the AI models that we use to process your photos run in-house on our own secure servers. Your photos are never used to train other AI models, they are never processed in the cloud, and they never leave our physical hard drives until they've finished processing and are uploaded to a private photo album for you to view.",
+    value: "item-4"
   },
   {
     question: "How does shipping work?",
     answer:
       "You'll be responsible for packing and shipping your photos to us. The return shipping cost will be added to your final cost of service.",
-    value: "item-4"
+    value: "item-5"
   },
   {
     question: "How long does the process take?",
     answer:
       "Once we receive your photos and authorize payment, the process takes about 3-4 days depending on the number of photos and the level of service you choose. We'll keep you updated on the progress.",
-    value: "item-5"
+    value: "item-6"
   },
   {
     question: "When do I get charged?",
     answer:
       "You'll be charged once we receive your photos and we've had a chance to review them. We'll send you a final invoice with the cost of service and return shipping.",
-    value: "item-6"
+    value: "item-7"
   },
   {
     question: "How do I see the results?",
     answer:
       "We'll provide you with a link to both the raw and AI processed results in an online photo album.",
-    value: "item-7"
+    value: "item-8"
   }
 ];
 
