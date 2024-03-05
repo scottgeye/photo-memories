@@ -8,7 +8,9 @@ import {
   BrainCog,
   Globe,
   Sparkles,
-  FileImage
+  FileImage,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 
 export {
@@ -21,5 +23,7 @@ export {
   BrainCog,
   Globe,
   Sparkles,
-  FileImage
+  FileImage,
+  ChevronLeft,
+  ChevronRight
 };

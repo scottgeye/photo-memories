@@ -1,15 +1,16 @@
-// import { useState } from "react";
+import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext
+  // CarouselPrevious,
+  // CarouselNext,
+  CarouselApi
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 // import { Switch } from "@/components/ui/switch";
 // import { Label } from "@/components/ui/label";
-// import { Sparkles, FileImage } from "./Icons";
+import { ChevronLeft, ChevronRight } from "./Icons";
 import beforeImage1 from "../assets/compare1-before.jpg";
 import afterImage1 from "../assets/compare1-after.jpg";
 import beforeImage2 from "../assets/compare2-before.jpg";
@@ -17,6 +18,7 @@ import afterImage2 from "../assets/compare2-after.jpg";
 import beforeImage3 from "../assets/compare3-before.jpg";
 import afterImage3 from "../assets/compare3-after.jpg";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
+import { Button } from "@/components/ui/button";
 
 interface ExamplesProps {
   id: number;
@@ -43,6 +45,7 @@ const examples: ExamplesProps[] = [
 ];
 
 export const Examples = () => {
+  const [api, setApi] = useState<CarouselApi>();
   // const [checkedArray, setCheckedArray] = useState(
   //   Array(examples.length).fill(false)
   // );
@@ -80,8 +83,9 @@ export const Examples = () => {
           watchDrag: false
         }}
         className="mx-2 md:mx-10 lg:mx-20"
+        setApi={setApi}
       >
-        <CarouselPrevious variant="link" className="ml-4" />
+        {/* <CarouselPrevious variant="link" className="ml-4" /> */}
         <CarouselContent>
           {examples.map(({ id, beforeImage, afterImage }: ExamplesProps) => (
             <CarouselItem key={id} className="basis-full md:basis-1/2">
@@ -105,6 +109,10 @@ export const Examples = () => {
                       // }`}
                     />
                   </ImgComparisonSlider>
+                  <div className="w-full grid grid-cols-2 pt-4 font-semibold">
+                    <span className="text-muted-foreground">Before</span>
+                    <span className="text-muted-foreground">After</span>
+                  </div>
 
                   {/* <div className="w-full flex items-center justify-center space-x-2">
                     <Label htmlFor="compare">
@@ -126,9 +134,26 @@ export const Examples = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-
-        <CarouselNext variant="link" className="mr-4" />
       </Carousel>
+
+      <div className="mt-6">
+        <Button
+          variant="outline"
+          size="icon"
+          className="h-14 w-14 mr-4 rounded-full bg-white hover:bg-white"
+          onClick={() => api!.scrollPrev()}
+        >
+          <ChevronLeft />
+        </Button>
+        <Button
+          variant="outline"
+          size="icon"
+          className="h-14 w-14 ml-4 rounded-full bg-white hover:bg-white"
+          onClick={() => api!.scrollNext()}
+        >
+          <ChevronRight />
+        </Button>
+      </div>
     </section>
   );
 };
