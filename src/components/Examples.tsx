@@ -16,6 +16,7 @@ import beforeImage2 from "../assets/compare2-before.jpg";
 import afterImage2 from "../assets/compare2-after.jpg";
 import beforeImage3 from "../assets/compare3-before.jpg";
 import afterImage3 from "../assets/compare3-after.jpg";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 interface ExamplesProps {
   id: number;
@@ -65,13 +66,18 @@ export const Examples = () => {
       </h2>
 
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Tap the toggle below each image to see the magic!
+        Move the slider in each image to see the magic!
       </p>
+
+      {/* <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
+        Tap the toggle below each image to see the magic!
+      </p> */}
 
       <Carousel
         opts={{
           align: "start",
-          loop: true
+          loop: true,
+          watchDrag: false
         }}
         className="mx-2 md:mx-10 lg:mx-20"
       >
@@ -80,23 +86,27 @@ export const Examples = () => {
           {examples.map(({ id, beforeImage, afterImage }: ExamplesProps) => (
             <CarouselItem key={id} className="basis-full md:basis-1/2">
               <Card>
-                <CardContent className="w-full flex aspect-square items-center justify-center flex-wrap py-0 px-3 bg-muted/50">
-                  <img
-                    src={beforeImage}
-                    alt="Before photo"
-                    className={`${imageSizes} ${
-                      checkedArray[id] ? "hidden" : "block"
-                    }`}
-                  />
-                  <img
-                    src={afterImage}
-                    alt="After photo"
-                    className={`${imageSizes} ${
-                      checkedArray[id] ? "block" : "hidden"
-                    }`}
-                  />
+                <CardContent className="w-full flex items-center justify-center flex-wrap py-5 px-3 bg-muted/50">
+                  <ImgComparisonSlider style={{ outline: "none" }}>
+                    <img
+                      slot="first"
+                      src={beforeImage}
+                      alt="Before photo"
+                      // className={`${imageSizes} ${
+                      //   checkedArray[id] ? "hidden" : "block"
+                      // }`}
+                    />
+                    <img
+                      slot="second"
+                      src={afterImage}
+                      alt="After photo"
+                      // className={`${imageSizes} ${
+                      //   checkedArray[id] ? "block" : "hidden"
+                      // }`}
+                    />
+                  </ImgComparisonSlider>
 
-                  <div className="w-full flex items-center justify-center space-x-2">
+                  {/* <div className="w-full flex items-center justify-center space-x-2">
                     <Label htmlFor="compare">
                       <FileImage />
                     </Label>
@@ -110,7 +120,7 @@ export const Examples = () => {
                     <Label htmlFor="compare">
                       <Sparkles />
                     </Label>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </CarouselItem>
