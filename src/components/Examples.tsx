@@ -140,7 +140,7 @@ export const Examples = () => {
         <Button
           variant="outline"
           size="icon"
-          className="h-14 w-14 mr-4 rounded-full bg-white hover:bg-white"
+          className="h-14 w-14 mr-4 rounded-full bg-default hover:bg-default"
           onClick={() => api!.scrollPrev()}
         >
           <ChevronLeft />
@@ -148,7 +148,7 @@ export const Examples = () => {
         <Button
           variant="outline"
           size="icon"
-          className="h-14 w-14 ml-4 rounded-full bg-white hover:bg-white"
+          className="h-14 w-14 ml-4 rounded-full bg-default hover:bg-default"
           onClick={() => api!.scrollNext()}
         >
           <ChevronRight />
