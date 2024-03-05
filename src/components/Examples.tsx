@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -7,9 +7,9 @@ import {
   CarouselNext
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Sparkles, FileImage } from "./Icons";
+// import { Switch } from "@/components/ui/switch";
+// import { Label } from "@/components/ui/label";
+// import { Sparkles, FileImage } from "./Icons";
 import beforeImage1 from "../assets/compare1-before.jpg";
 import afterImage1 from "../assets/compare1-after.jpg";
 import beforeImage2 from "../assets/compare2-before.jpg";
@@ -43,17 +43,17 @@ const examples: ExamplesProps[] = [
 ];
 
 export const Examples = () => {
-  const [checkedArray, setCheckedArray] = useState(
-    Array(examples.length).fill(false)
-  );
+  // const [checkedArray, setCheckedArray] = useState(
+  //   Array(examples.length).fill(false)
+  // );
 
-  const setCheckedAtIndex = (index: number, checked: boolean) => {
-    setCheckedArray((currentArray) =>
-      currentArray.map((item, i) => (i === index ? checked : item))
-    );
-  };
+  // const setCheckedAtIndex = (index: number, checked: boolean) => {
+  //   setCheckedArray((currentArray) =>
+  //     currentArray.map((item, i) => (i === index ? checked : item))
+  //   );
+  // };
 
-  const imageSizes = "";
+  // const imageSizes = "";
 
   return (
     <section id="features" className="container py-15 text-center">
