@@ -22,6 +22,7 @@ interface PricingProps {
   name: string;
   popular: PopularPlanType;
   price: string;
+  discountPrice?: string;
   description: string;
   disclaimer?: string;
   buttonText: string;
@@ -44,6 +45,7 @@ const pricingList: PricingProps[] = [
     name: "restored",
     popular: 1,
     price: "0.75",
+    discountPrice: "0.50",
     description: "Minium 100 photos",
     disclaimer: "Pickup & Shipping not included",
     buttonText: "Get Started",
@@ -59,7 +61,8 @@ const pricingList: PricingProps[] = [
     title: "AI Enhanced",
     name: "enhanced",
     popular: 0,
-    price: "1",
+    price: "1.00",
+    discountPrice: "0.75",
     description: "Minium 100 photos",
     disclaimer: "Shipping not included",
     buttonText: "Get Started",
@@ -104,10 +107,21 @@ export const Pricing = () => {
                   </Badge>
                 ) : null}
               </CardTitle>
-              <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> / photo</span>
-              </div>
+              {pricing.discountPrice ? (
+                <div>
+                  <span className="text-2xl line-through">
+                    ${pricing.price}
+                  </span>{" "}
+                  <span className="text-3xl font-bold">
+                    ${pricing.discountPrice}
+                  </span>
+                  <span className="text-muted-foreground"> / photo</span>
+                </div>
+              ) : (
+                <div>
+                  <span className="text-3xl font-bold">${pricing.price}</span>
+                </div>
+              )}
 
               <CardDescription>{pricing.description}</CardDescription>
               {pricing.disclaimer ? (

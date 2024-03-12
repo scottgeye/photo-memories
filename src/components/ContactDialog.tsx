@@ -57,8 +57,9 @@ export function ContactDialog({ defaultPackage }: ContactDialogProps) {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setSubmitted(true);
-    track("Contact", values);
     sendEmail(JSON.stringify(values, null, 2));
+    track("Contact", values);
+    window.fbq("track", "Contact");
   };
 
   return (
