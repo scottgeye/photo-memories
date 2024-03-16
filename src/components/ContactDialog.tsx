@@ -138,12 +138,18 @@ export function ContactDialog({ defaultPackage }: ContactDialogProps) {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="basic">Digitize</SelectItem>
+                          <SelectItem value="basic">
+                            Digitize - $0.50 / Photo
+                          </SelectItem>
                           <SelectItem value="restored">
-                            Digitize & Restore
+                            Digitize & Restore{" "}
+                            <span className="line-through">$0.75</span> $0.50 /
+                            Photo
                           </SelectItem>
                           <SelectItem value="enhanced">
-                            Digitize, Restore & Enhance
+                            Digitize, Restore & Enhance{" "}
+                            <span className="line-through">$1.00</span> $0.75 /
+                            Photo
                           </SelectItem>
                         </SelectContent>
                       </Select>

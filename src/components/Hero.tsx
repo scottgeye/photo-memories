@@ -46,12 +46,12 @@ export const Hero = () => {
           <img
             src={image}
             alt="About feature"
-            className="w-[500px] lg:w-[600px] mx-auto lg:mr-80"
+            className="w-[500px] lg:w-[600px] mx-auto lg:mr-80 xl:mr-20"
           />
         </div>
 
         {/* Shadow effect */}
-        <div className="shadow"></div>
+        <div className="shadow mx-auto left-1/3 lg:left-2/3 lg:mr-80 xl:mr-20"></div>
       </div>
     </section>
   );
