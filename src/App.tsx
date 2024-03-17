@@ -16,10 +16,12 @@ import { Examples } from "./components/Examples";
 // import { Testimonials } from "./components/Testimonials";
 import "./App.css";
 import { Analytics } from "@vercel/analytics/react";
+import { OfferDialog } from "./components/OfferDialog";
 
 function App() {
   return (
     <>
+      <OfferDialog />
       <Navbar />
       <Hero />
       {/* <Sponsors /> */}

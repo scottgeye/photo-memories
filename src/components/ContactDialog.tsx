@@ -63,7 +63,10 @@ export function ContactDialog({ defaultPackage }: ContactDialogProps) {
   };
 
   return (
-    <DialogContent className="sm:max-w-[425px]">
+    <DialogContent
+      className="sm:max-w-[425px]"
+      onOpenAutoFocus={(e) => e.preventDefault()}
+    >
       {!isSubmitted ? (
         <>
           <DialogHeader>
