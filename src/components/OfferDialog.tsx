@@ -23,8 +23,8 @@ export function OfferDialog() {
           </DialogDescription>
 
           <div className="flex justify-center py-8">
-            <span className="text-8xl font-bold">30%</span>{" "}
-            <span className="text-4xl">Off *</span>
+            <span className="text-7xl font-bold">30%</span>{" "}
+            <span className="text-2xl">Off *</span>
           </div>
 
           <Button
@@ -33,7 +33,7 @@ export function OfferDialog() {
           >
             Claim Offer
           </Button>
-          <DialogDescription className="text-center my-8">
+          <DialogDescription className="text-center my-8 text-sm">
             *Offer good on AI Restoration Package
           </DialogDescription>
         </DialogHeader>
